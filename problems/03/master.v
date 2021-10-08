@@ -12,7 +12,7 @@ reg [25:0] c;
 reg clk_count = 0; //синхросигнал изменения счетчика
 always @(posedge sclk)
 begin
-	if (c == 26'b10111110101111000010000000)
+	if (c == 26'd50000000)
 	begin
 		c <= 0;
 		clk_count <= !clk_count;
