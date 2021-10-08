@@ -8,9 +8,9 @@ reg [3:0] bit_counter;
 
 always @(posedge sclk)
 begin
-	shift_regs[0] <= mosi;
 	if (bit_counter == 8)
 	begin
+		shift_regs[0] <= mosi;
 		bit_counter <= 0;
 		data_indikators <= shift_regs;
 	end
