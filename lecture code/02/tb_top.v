@@ -39,7 +39,7 @@ initial begin
         #(20);
         exp_factor = 2**(16-sel_int);
         exp = period*exp_factor;
-        clkdiv_verif(  .sel_i(sel_int), .exp_i(exp), .is_error_o(is_error));
+        // clkdiv_verif(  .sel_i(sel_int), .exp_i(exp), .is_error_o(is_error));
         if( is_error)
             $finish;
     end
@@ -58,13 +58,13 @@ task clkdiv_verif(
 realtime period;
 begin
     sel = sel_i;
-    //@(posedge dclk);
-    @(dclk === 1'b0);
-    @(dclk === 1'b1);
+    @(posedge dclk);
+    // @(dclk === 1'b0);
+    // @(dclk === 1'b1);
     period = $realtime;
-    //@(posedge dclk);
-    @(dclk === 1'b0);
-    @(dclk === 1'b1);
+    @(posedge dclk);
+    // @(dclk === 1'b0);
+    // @(dclk === 1'b1);
     period = $realtime - period;
     
     if( exp_i == period)
