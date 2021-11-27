@@ -1,0 +1,2 @@
+Warning (10268): Verilog HDL information at spi_master.v(18): always construct contains both blocking and non-blocking assignments File: /home/zigal0/FPGA/DREC-fpga/Homework/Addition/spi/spi_master.v Line: 18
+Warning (10268): Verilog HDL information at spi_slave.v(15): always construct contains both blocking and non-blocking assignments File: /home/zigal0/FPGA/DREC-fpga/Homework/Addition/spi/spi_slave.v Line: 15

@@ -1,0 +1,129 @@
+|top
+CLK => CLK.IN1
+DS_EN1 << hex_display:hex_display.enpos
+DS_EN2 << hex_display:hex_display.enpos
+DS_EN3 << hex_display:hex_display.enpos
+DS_EN4 << hex_display:hex_display.enpos
+DS_A << hex_display:hex_display.seg
+DS_B << hex_display:hex_display.seg
+DS_C << hex_display:hex_display.seg
+DS_D << hex_display:hex_display.seg
+DS_E << hex_display:hex_display.seg
+DS_F << hex_display:hex_display.seg
+DS_G << hex_display:hex_display.seg
+DS_DP << hex_display:hex_display.seg
+
+
+|top|spi_master:master
+counter_clk => cnt[0].CLK
+counter_clk => cnt[1].CLK
+counter_clk => cnt[2].CLK
+counter_clk => cnt[3].CLK
+counter_clk => cnt[4].CLK
+counter_clk => cnt[5].CLK
+counter_clk => cnt[6].CLK
+counter_clk => cnt[7].CLK
+clk => i[0].CLK
+clk => i[1].CLK
+clk => i[2].CLK
+clk => i[3].CLK
+clk => i[4].CLK
+clk => my_mosi.CLK
+miso => ~NO_FANOUT~
+mosi <= my_mosi.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|top|spi_slave:slave
+clk => to_display[0].CLK
+clk => to_display[1].CLK
+clk => to_display[2].CLK
+clk => to_display[3].CLK
+clk => to_display[4].CLK
+clk => to_display[5].CLK
+clk => to_display[6].CLK
+clk => to_display[7].CLK
+clk => cur[0].CLK
+clk => cur[1].CLK
+clk => cur[2].CLK
+clk => cur[3].CLK
+clk => cur[4].CLK
+clk => cur[5].CLK
+clk => cur[6].CLK
+clk => cur[7].CLK
+clk => i[0].CLK
+clk => i[1].CLK
+clk => i[2].CLK
+clk => i[3].CLK
+clk => i[4].CLK
+clk => i[5].CLK
+mosi => cur.DATAB
+data[0] <= to_display[0].DB_MAX_OUTPUT_PORT_TYPE
+data[1] <= to_display[1].DB_MAX_OUTPUT_PORT_TYPE
+data[2] <= to_display[2].DB_MAX_OUTPUT_PORT_TYPE
+data[3] <= to_display[3].DB_MAX_OUTPUT_PORT_TYPE
+data[4] <= to_display[4].DB_MAX_OUTPUT_PORT_TYPE
+data[5] <= to_display[5].DB_MAX_OUTPUT_PORT_TYPE
+data[6] <= to_display[6].DB_MAX_OUTPUT_PORT_TYPE
+data[7] <= to_display[7].DB_MAX_OUTPUT_PORT_TYPE
+miso <= <GND>
+
+
+|top|hex_display:hex_display
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+clk => cnt[3].CLK
+clk => cnt[4].CLK
+clk => cnt[5].CLK
+clk => cnt[6].CLK
+clk => cnt[7].CLK
+clk => cnt[8].CLK
+clk => cnt[9].CLK
+clk => cnt[10].CLK
+clk => cnt[11].CLK
+clk => cnt[12].CLK
+data[0] => Mux0.IN14
+data[1] => Mux1.IN14
+data[2] => Mux2.IN14
+data[3] => Mux3.IN14
+data[4] => Mux0.IN10
+data[5] => Mux1.IN10
+data[6] => Mux2.IN10
+data[7] => Mux3.IN10
+data[8] => Mux0.IN6
+data[9] => Mux1.IN6
+data[10] => Mux2.IN6
+data[11] => Mux3.IN6
+data[12] => Mux0.IN2
+data[13] => Mux1.IN2
+data[14] => Mux2.IN2
+data[15] => Mux3.IN2
+enpos[0] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+enpos[1] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+enpos[2] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+enpos[3] <= ShiftLeft0.DB_MAX_OUTPUT_PORT_TYPE
+seg[0] <= hex_to_seg:hex_to_seg.seg
+seg[1] <= hex_to_seg:hex_to_seg.seg
+seg[2] <= hex_to_seg:hex_to_seg.seg
+seg[3] <= hex_to_seg:hex_to_seg.seg
+seg[4] <= hex_to_seg:hex_to_seg.seg
+seg[5] <= hex_to_seg:hex_to_seg.seg
+seg[6] <= hex_to_seg:hex_to_seg.seg
+seg[7] <= hex_to_seg:hex_to_seg.seg
+
+
+|top|hex_display:hex_display|hex_to_seg:hex_to_seg
+data[0] => Decoder0.IN3
+data[1] => Decoder0.IN2
+data[2] => Decoder0.IN1
+data[3] => Decoder0.IN0
+seg[0] <= <GND>
+seg[1] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg[2] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg[3] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg[4] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg[5] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg[6] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg[7] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+
+
