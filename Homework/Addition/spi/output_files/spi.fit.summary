@@ -1,14 +1,14 @@
-Fitter Status : Successful - Sun Nov 28 02:21:20 2021
+Fitter Status : Successful - Sun Nov 28 04:02:11 2021
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : spi
 Top-level Entity Name : top
 Family : Cyclone IV E
 Device : EP4CE6E22C8
 Timing Models : Final
-Total logic elements : 145 / 6,272 ( 2 % )
-    Total combinational functions : 134 / 6,272 ( 2 % )
-    Dedicated logic registers : 98 / 6,272 ( 2 % )
-Total registers : 98
+Total logic elements : 92 / 6,272 ( 1 % )
+    Total combinational functions : 79 / 6,272 ( 1 % )
+    Dedicated logic registers : 59 / 6,272 ( < 1 % )
+Total registers : 59
 Total pins : 13 / 92 ( 14 % )
 Total virtual pins : 0
 Total memory bits : 0 / 276,480 ( 0 % )

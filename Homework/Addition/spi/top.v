@@ -14,24 +14,12 @@ always @(posedge CLK) begin
 		cnt <= cnt + 1;
 end
 
-wire counter_clk = (cnt == 0);
+wire new_clk = (cnt == 0);
 
-reg [21:0] cnt1 = 0;
+wire [15:0] data;
 
-always @(posedge CLK) begin
-	if(cnt1[21] == 1)
-		cnt1 <= 0;
-	else
-		cnt1 <= cnt1 + 1;
-end
-
-wire clk1 = (cnt1 == 0);
-
-wire [7:0] data;
-//wire miso;
-//wire mosi;
-spi_master master(.counter_clk(counter_clk), .clk(clk1), .miso(miso), .mosi(mosi));
-spi_slave slave(.clk(clk1), .mosi(mosi), .data(data), .miso(miso));
+spi_master master(.clk(new_clk), .miso(miso), .mosi(mosi));
+spi_slave slave(.clk(new_clk), .mosi(mosi), .miso(miso), .data(data));
 
 wire [3:0] enpos;
 assign {DS_EN1, DS_EN2, DS_EN3, DS_EN4} = ~enpos;
