@@ -1,18 +1,18 @@
 |top
 CLK => CLK.IN1
-KEY1 => KEY1.IN1
-DS_EN1 << hex_display:hex_display.enpos
-DS_EN2 << hex_display:hex_display.enpos
-DS_EN3 << hex_display:hex_display.enpos
-DS_EN4 << hex_display:hex_display.enpos
-DS_A << hex_display:hex_display.seg
-DS_B << hex_display:hex_display.seg
-DS_C << hex_display:hex_display.seg
-DS_D << hex_display:hex_display.seg
-DS_E << hex_display:hex_display.seg
-DS_F << hex_display:hex_display.seg
-DS_G << hex_display:hex_display.seg
-DS_DP << hex_display:hex_display.seg
+KEY1 => reset_sync[0].DATAIN
+DS_EN1 <= hex_display:hex_display.enpos
+DS_EN2 <= hex_display:hex_display.enpos
+DS_EN3 <= hex_display:hex_display.enpos
+DS_EN4 <= hex_display:hex_display.enpos
+DS_A <= hex_display:hex_display.seg
+DS_B <= hex_display:hex_display.seg
+DS_C <= hex_display:hex_display.seg
+DS_D <= hex_display:hex_display.seg
+DS_E <= hex_display:hex_display.seg
+DS_F <= hex_display:hex_display.seg
+DS_G <= hex_display:hex_display.seg
+DS_DP <= hex_display:hex_display.seg
 
 
 |top|spi_master:master
@@ -118,7 +118,6 @@ clk => cnt[8].CLK
 clk => cnt[9].CLK
 clk => cnt[10].CLK
 clk => cnt[11].CLK
-clk => cnt[12].CLK
 data[0] => Mux0.IN14
 data[1] => Mux1.IN14
 data[2] => Mux2.IN14

@@ -22,7 +22,5 @@ end
 
 assign led1 = 	btn1 == 1'b0	? 	cnt[23] 	: 		1'b1;
 assign led2 = 	btn2 == 1'b0	? 	cnt[23]	:		1'b1;
-
-
 	
 endmodule

@@ -1,5 +1,5 @@
 Flow report for lesson_4f
-Tue Sep 28 21:35:01 2021
+Mon Nov 29 18:35:01 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Sep 28 21:34:59 2021       ;
+; Flow Status                        ; Successful - Mon Nov 29 18:35:01 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; lesson_4f                                   ;
 ; Top-level Entity Name              ; lesson_4f                                   ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/28/2021 21:34:46 ;
+; Start date & time ; 11/29/2021 18:34:26 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; lesson_4f           ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 48710646409809.163285408615848         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 8796753839842.163820006623332          ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -94,10 +94,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:10     ; 1.0                     ; 955 MB              ; 00:00:24                           ;
-; Fitter               ; 00:00:03     ; 1.0                     ; 1501 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:01     ; 1.0                     ; 852 MB              ; 00:00:01                           ;
-; Total                ; 00:00:14     ; --                      ; --                  ; 00:00:28                           ;
+; Analysis & Synthesis ; 00:00:23     ; 1.0                     ; 938 MB              ; 00:00:39                           ;
+; Fitter               ; 00:00:05     ; 1.1                     ; 1491 MB             ; 00:00:06                           ;
+; Assembler            ; 00:00:01     ; 1.0                     ; 810 MB              ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 817 MB              ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 1046 MB             ; 00:00:01                           ;
+; Total                ; 00:00:31     ; --                      ; --                  ; 00:00:49                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -106,9 +108,11 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+----------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name        ; OS Version ; Processor type ;
 +----------------------+------------------+----------------+------------+----------------+
-; Analysis & Synthesis ; yauheni-GL553VE  ; Ubuntu 16.04.3 ; 16         ; x86_64         ;
-; Fitter               ; yauheni-GL553VE  ; Ubuntu 16.04.3 ; 16         ; x86_64         ;
-; Timing Analyzer      ; yauheni-GL553VE  ; Ubuntu 16.04.3 ; 16         ; x86_64         ;
+; Analysis & Synthesis ; zigal0-U16       ; Ubuntu 16.04.7 ; 16         ; x86_64         ;
+; Fitter               ; zigal0-U16       ; Ubuntu 16.04.7 ; 16         ; x86_64         ;
+; Assembler            ; zigal0-U16       ; Ubuntu 16.04.7 ; 16         ; x86_64         ;
+; Timing Analyzer      ; zigal0-U16       ; Ubuntu 16.04.7 ; 16         ; x86_64         ;
+; EDA Netlist Writer   ; zigal0-U16       ; Ubuntu 16.04.7 ; 16         ; x86_64         ;
 +----------------------+------------------+----------------+------------+----------------+
 
 
@@ -117,7 +121,9 @@ refer to the applicable agreement for further details.
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off lesson_4f -c lesson_4f
 quartus_fit --read_settings_files=off --write_settings_files=off lesson_4f -c lesson_4f
+quartus_asm --read_settings_files=off --write_settings_files=off lesson_4f -c lesson_4f
 quartus_sta lesson_4f -c lesson_4f
+quartus_eda --read_settings_files=off --write_settings_files=off lesson_4f -c lesson_4f
 
 
 

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for spi
-Sun Nov 28 03:57:32 2021
+Mon Nov 29 22:18:16 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -43,15 +43,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Nov 28 03:57:32 2021       ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 29 22:18:16 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; spi                                         ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 157                                         ;
-;     Total combinational functions  ; 133                                         ;
-;     Dedicated logic registers      ; 102                                         ;
-; Total registers                    ; 102                                         ;
+; Total logic elements               ; 150                                         ;
+;     Total combinational functions  ; 124                                         ;
+;     Dedicated logic registers      ; 103                                         ;
+; Total registers                    ; 103                                         ;
 ; Total pins                         ; 14                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -181,20 +181,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 157       ;
+; Estimated Total logic elements              ; 150       ;
 ;                                             ;           ;
-; Total combinational functions               ; 133       ;
+; Total combinational functions               ; 124       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 43        ;
-;     -- 3 input functions                    ; 2         ;
-;     -- <=2 input functions                  ; 88        ;
+;     -- 4 input functions                    ; 40        ;
+;     -- 3 input functions                    ; 3         ;
+;     -- <=2 input functions                  ; 81        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 64        ;
-;     -- arithmetic mode                      ; 69        ;
+;     -- normal mode                          ; 56        ;
+;     -- arithmetic mode                      ; 68        ;
 ;                                             ;           ;
-; Total registers                             ; 102       ;
-;     -- Dedicated logic registers            ; 102       ;
+; Total registers                             ; 103       ;
+;     -- Dedicated logic registers            ; 103       ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 14        ;
@@ -202,9 +202,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 61        ;
-; Total fan-out                               ; 667       ;
-; Average fan-out                             ; 2.54      ;
+; Maximum fan-out                             ; 62        ;
+; Total fan-out                               ; 658       ;
+; Average fan-out                             ; 2.58      ;
 +---------------------------------------------+-----------+
 
 
@@ -213,8 +213,8 @@ refer to the applicable agreement for further details.
 +-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                ; Entity Name ; Library Name ;
 +-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+-------------+--------------+
-; |top                          ; 133 (65)            ; 102 (48)                  ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |top                                               ; top         ; work         ;
-;    |hex_display:hex_display|  ; 41 (34)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|hex_display:hex_display                       ; hex_display ; work         ;
+; |top                          ; 124 (64)            ; 103 (50)                  ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |top                                               ; top         ; work         ;
+;    |hex_display:hex_display|  ; 33 (26)             ; 14 (14)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|hex_display:hex_display                       ; hex_display ; work         ;
 ;       |hex_to_seg:hex_to_seg| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|hex_display:hex_display|hex_to_seg:hex_to_seg ; hex_to_seg  ; work         ;
 ;    |spi_master:master|        ; 27 (27)             ; 23 (23)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|spi_master:master                             ; spi_master  ; work         ;
 ;    |spi_slave:slave|          ; 0 (0)               ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|spi_slave:slave                               ; spi_slave   ; work         ;
@@ -227,8 +227,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 102   ;
-; Number of registers using Synchronous Clear  ; 61    ;
+; Total registers                              ; 103   ;
+; Number of registers using Synchronous Clear  ; 73    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -252,23 +252,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 14                          ;
-; cycloneiii_ff         ; 102                         ;
+; cycloneiii_ff         ; 103                         ;
 ;     ENA               ; 24                          ;
 ;     ENA SCLR          ; 5                           ;
-;     SCLR              ; 56                          ;
-;     plain             ; 17                          ;
-; cycloneiii_lcell_comb ; 142                         ;
-;     arith             ; 69                          ;
-;         2 data inputs ; 69                          ;
-;     normal            ; 73                          ;
+;     SCLR              ; 68                          ;
+;     plain             ; 6                           ;
+; cycloneiii_lcell_comb ; 133                         ;
+;     arith             ; 68                          ;
+;         2 data inputs ; 68                          ;
+;     normal            ; 65                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 14                          ;
-;         2 data inputs ; 13                          ;
-;         3 data inputs ; 2                           ;
-;         4 data inputs ; 43                          ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 40                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.56                        ;
+; Average LUT depth     ; 2.43                        ;
 +-----------------------+-----------------------------+
 
 
@@ -287,7 +287,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Nov 28 03:57:12 2021
+    Info: Processing started: Mon Nov 29 22:17:56 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off spi -c spi
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -301,32 +301,30 @@ Info (12021): Found 1 design units, including 1 entities, in source file spi_mas
     Info (12023): Found entity 1: spi_master File: /home/zigal0/FPGA/DREC-fpga/Homework/Task#3/spi/spi_master.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file spi_slave.v
     Info (12023): Found entity 1: spi_slave File: /home/zigal0/FPGA/DREC-fpga/Homework/Task#3/spi/spi_slave.v Line: 1
-Warning (10236): Verilog HDL Implicit Net warning at top.v(34): created implicit net for "miso" File: /home/zigal0/FPGA/DREC-fpga/Homework/Task#3/spi/top.v Line: 34
-Warning (10236): Verilog HDL Implicit Net warning at top.v(34): created implicit net for "mosi" File: /home/zigal0/FPGA/DREC-fpga/Homework/Task#3/spi/top.v Line: 34
-Warning (10236): Verilog HDL Implicit Net warning at top.v(34): created implicit net for "rdy" File: /home/zigal0/FPGA/DREC-fpga/Homework/Task#3/spi/top.v Line: 34
-Warning (10236): Verilog HDL Implicit Net warning at hex_display.v(18): created implicit net for "divided_clk" File: /home/zigal0/FPGA/DREC-fpga/Homework/Task#3/spi/hex_display.v Line: 18
+Warning (10236): Verilog HDL Implicit Net warning at top.v(43): created implicit net for "miso" File: /home/zigal0/FPGA/DREC-fpga/Homework/Task#3/spi/top.v Line: 43
+Warning (10236): Verilog HDL Implicit Net warning at top.v(43): created implicit net for "mosi" File: /home/zigal0/FPGA/DREC-fpga/Homework/Task#3/spi/top.v Line: 43
+Warning (10236): Verilog HDL Implicit Net warning at top.v(43): created implicit net for "rdy" File: /home/zigal0/FPGA/DREC-fpga/Homework/Task#3/spi/top.v Line: 43
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at top.v(15): truncated value with size 32 to match size of target (26) File: /home/zigal0/FPGA/DREC-fpga/Homework/Task#3/spi/top.v Line: 15
-Warning (10230): Verilog HDL assignment warning at top.v(26): truncated value with size 32 to match size of target (22) File: /home/zigal0/FPGA/DREC-fpga/Homework/Task#3/spi/top.v Line: 26
-Info (12128): Elaborating entity "spi_master" for hierarchy "spi_master:master" File: /home/zigal0/FPGA/DREC-fpga/Homework/Task#3/spi/top.v Line: 34
+Warning (10230): Verilog HDL assignment warning at top.v(40): truncated value with size 32 to match size of target (22) File: /home/zigal0/FPGA/DREC-fpga/Homework/Task#3/spi/top.v Line: 40
+Info (12128): Elaborating entity "spi_master" for hierarchy "spi_master:master" File: /home/zigal0/FPGA/DREC-fpga/Homework/Task#3/spi/top.v Line: 43
 Warning (10230): Verilog HDL assignment warning at spi_master.v(33): truncated value with size 32 to match size of target (5) File: /home/zigal0/FPGA/DREC-fpga/Homework/Task#3/spi/spi_master.v Line: 33
-Info (12128): Elaborating entity "spi_slave" for hierarchy "spi_slave:slave" File: /home/zigal0/FPGA/DREC-fpga/Homework/Task#3/spi/top.v Line: 35
-Info (12128): Elaborating entity "hex_display" for hierarchy "hex_display:hex_display" File: /home/zigal0/FPGA/DREC-fpga/Homework/Task#3/spi/top.v Line: 43
-Warning (10230): Verilog HDL assignment warning at hex_display.v(15): truncated value with size 32 to match size of target (13) File: /home/zigal0/FPGA/DREC-fpga/Homework/Task#3/spi/hex_display.v Line: 15
-Info (12128): Elaborating entity "hex_to_seg" for hierarchy "hex_display:hex_display|hex_to_seg:hex_to_seg" File: /home/zigal0/FPGA/DREC-fpga/Homework/Task#3/spi/hex_display.v Line: 25
+Info (12128): Elaborating entity "spi_slave" for hierarchy "spi_slave:slave" File: /home/zigal0/FPGA/DREC-fpga/Homework/Task#3/spi/top.v Line: 44
+Info (12128): Elaborating entity "hex_display" for hierarchy "hex_display:hex_display" File: /home/zigal0/FPGA/DREC-fpga/Homework/Task#3/spi/top.v Line: 45
+Warning (10230): Verilog HDL assignment warning at hex_display.v(22): truncated value with size 32 to match size of target (12) File: /home/zigal0/FPGA/DREC-fpga/Homework/Task#3/spi/hex_display.v Line: 22
+Info (12128): Elaborating entity "hex_to_seg" for hierarchy "hex_display:hex_display|hex_to_seg:hex_to_seg" File: /home/zigal0/FPGA/DREC-fpga/Homework/Task#3/spi/hex_display.v Line: 26
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "DS_DP" is stuck at GND File: /home/zigal0/FPGA/DREC-fpga/Homework/Task#3/spi/top.v Line: 7
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 171 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 164 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 157 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 982 megabytes
-    Info: Processing ended: Sun Nov 28 03:57:32 2021
+    Info (21061): Implemented 150 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 9 warnings
+    Info: Peak virtual memory: 979 megabytes
+    Info: Processing ended: Mon Nov 29 22:18:16 2021
     Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:36
+    Info: Total CPU time (on all processors): 00:00:34
 
 

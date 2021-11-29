@@ -21,17 +21,6 @@ always @(posedge clk) begin
 	end
 	else 
 		to_display <= cur;
-//	if (i < 16) begin
-//		i = i + 1;
-//		if (i < 8) begin
-////			my_miso <= cur[7];
-//			cur <= (cur << 1) | mosi;
-//		end
-//		if (i == 8)
-//			to_display <= cur;
-//	end
-//	else
-//		i = 0;
 end
 
 endmodule

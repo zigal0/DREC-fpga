@@ -1,5 +1,5 @@
 Analysis & Synthesis report for hex_display_counter
-Fri Nov 26 19:56:29 2021
+Mon Nov 29 20:18:24 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -44,13 +44,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 26 19:56:29 2021       ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 29 20:18:24 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; hex_display_counter                         ;
 ; Top-level Entity Name              ; top                                         ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 98                                          ;
-;     Total combinational functions  ; 98                                          ;
+; Total logic elements               ; 85                                          ;
+;     Total combinational functions  ; 85                                          ;
 ;     Dedicated logic registers      ; 49                                          ;
 ; Total registers                    ; 49                                          ;
 ; Total pins                         ; 14                                          ;
@@ -176,16 +176,16 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 98        ;
+; Estimated Total logic elements              ; 85        ;
 ;                                             ;           ;
-; Total combinational functions               ; 98        ;
+; Total combinational functions               ; 85        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 29        ;
-;     -- 3 input functions                    ; 1         ;
-;     -- <=2 input functions                  ; 68        ;
+;     -- 4 input functions                    ; 25        ;
+;     -- 3 input functions                    ; 0         ;
+;     -- <=2 input functions                  ; 60        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 54        ;
+;     -- normal mode                          ; 41        ;
 ;     -- arithmetic mode                      ; 44        ;
 ;                                             ;           ;
 ; Total registers                             ; 49        ;
@@ -198,8 +198,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                                             ;           ;
 ; Maximum fan-out node                        ; CLK~input ;
 ; Maximum fan-out                             ; 39        ;
-; Total fan-out                               ; 382       ;
-; Average fan-out                             ; 2.18      ;
+; Total fan-out                               ; 373       ;
+; Average fan-out                             ; 2.30      ;
 +---------------------------------------------+-----------+
 
 
@@ -208,7 +208,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+-------------+--------------+
 ; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                ; Entity Name ; Library Name ;
 +-------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------+-------------+--------------+
-; |top                          ; 98 (49)             ; 49 (26)                   ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |top                                               ; top         ; work         ;
+; |top                          ; 85 (36)             ; 49 (26)                   ; 0           ; 0            ; 0       ; 0         ; 14   ; 0            ; |top                                               ; top         ; work         ;
 ;    |counter:counter|          ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|counter:counter                               ; counter     ; work         ;
 ;    |hex_display:hex_display|  ; 41 (34)             ; 15 (15)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|hex_display:hex_display                       ; hex_display ; work         ;
 ;       |hex_to_seg:hex_to_seg| ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top|hex_display:hex_display|hex_to_seg:hex_to_seg ; hex_to_seg  ; work         ;
@@ -222,7 +222,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
 ; Total registers                              ; 49    ;
-; Number of registers using Synchronous Clear  ; 8     ;
+; Number of registers using Synchronous Clear  ; 34    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -256,20 +256,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; boundary_port         ; 14                          ;
 ; cycloneiii_ff         ; 49                          ;
-;     SCLR              ; 8                           ;
-;     plain             ; 41                          ;
-; cycloneiii_lcell_comb ; 107                         ;
+;     SCLR              ; 34                          ;
+;     plain             ; 15                          ;
+; cycloneiii_lcell_comb ; 94                          ;
 ;     arith             ; 44                          ;
 ;         2 data inputs ; 44                          ;
-;     normal            ; 63                          ;
+;     normal            ; 50                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 12                          ;
-;         2 data inputs ; 20                          ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 29                          ;
+;         2 data inputs ; 12                          ;
+;         4 data inputs ; 25                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.20                        ;
-; Average LUT depth     ; 2.96                        ;
+; Max LUT depth         ; 3.50                        ;
+; Average LUT depth     ; 2.60                        ;
 +-----------------------+-----------------------------+
 
 
@@ -288,7 +287,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Nov 26 19:56:08 2021
+    Info: Processing started: Mon Nov 29 20:18:03 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off hex_display_counter -c hex_display_counter
 Warning (12473): User specified to use only one processors but 4 processors were detected which could be used to decrease run time.
 Info (12021): Found 1 design units, including 1 entities, in source file /home/zigal0/FPGA/DREC-fpga/Homework/Addition/hex_display_counter/src/top.v
@@ -301,9 +300,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file /home/z
     Info (12023): Found entity 1: counter File: /home/zigal0/FPGA/DREC-fpga/Homework/Addition/hex_display_counter/src/counter.v Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at hex_display.v(18): created implicit net for "divided_clk" File: /home/zigal0/FPGA/DREC-fpga/Homework/Addition/hex_display_counter/src/hex_display.v Line: 18
 Info (12127): Elaborating entity "top" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at top.v(16): truncated value with size 32 to match size of target (26) File: /home/zigal0/FPGA/DREC-fpga/Homework/Addition/hex_display_counter/src/top.v Line: 16
-Info (12128): Elaborating entity "counter" for hierarchy "counter:counter" File: /home/zigal0/FPGA/DREC-fpga/Homework/Addition/hex_display_counter/src/top.v Line: 22
-Info (12128): Elaborating entity "hex_display" for hierarchy "hex_display:hex_display" File: /home/zigal0/FPGA/DREC-fpga/Homework/Addition/hex_display_counter/src/top.v Line: 30
+Warning (10230): Verilog HDL assignment warning at top.v(25): truncated value with size 32 to match size of target (26) File: /home/zigal0/FPGA/DREC-fpga/Homework/Addition/hex_display_counter/src/top.v Line: 25
+Info (12128): Elaborating entity "counter" for hierarchy "counter:counter" File: /home/zigal0/FPGA/DREC-fpga/Homework/Addition/hex_display_counter/src/top.v Line: 28
+Info (12128): Elaborating entity "hex_display" for hierarchy "hex_display:hex_display" File: /home/zigal0/FPGA/DREC-fpga/Homework/Addition/hex_display_counter/src/top.v Line: 29
 Warning (10230): Verilog HDL assignment warning at hex_display.v(15): truncated value with size 32 to match size of target (13) File: /home/zigal0/FPGA/DREC-fpga/Homework/Addition/hex_display_counter/src/hex_display.v Line: 15
 Info (12128): Elaborating entity "hex_to_seg" for hierarchy "hex_display:hex_display|hex_to_seg:hex_to_seg" File: /home/zigal0/FPGA/DREC-fpga/Homework/Addition/hex_display_counter/src/hex_display.v Line: 25
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
@@ -312,14 +311,14 @@ Warning (13024): Output pins are stuck at VCC or GND
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 112 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 99 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 98 logic cells
+    Info (21061): Implemented 85 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 7 warnings
-    Info: Peak virtual memory: 939 megabytes
-    Info: Processing ended: Fri Nov 26 19:56:29 2021
+    Info: Peak virtual memory: 936 megabytes
+    Info: Processing ended: Mon Nov 29 20:18:24 2021
     Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:34
+    Info: Total CPU time (on all processors): 00:00:37
 
 

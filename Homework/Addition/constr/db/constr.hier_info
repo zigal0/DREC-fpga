@@ -1,0 +1,10 @@
+|top
+clk => cnt[0].CLK
+clk => cnt[1].CLK
+clk => cnt[2].CLK
+
+
+|top|counter:counter
+clk => ~NO_FANOUT~
+
+

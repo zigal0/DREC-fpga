@@ -6,25 +6,26 @@ module hex_display (
 	output [7:0] seg
 );
 
-reg [12:0] cnt;
+reg [11:0] cnt;
+reg [1:0] i = 2'h0;
+
+wire display_clk;
+wire [3:0] curData = data[i * 4 +: 4];
+
+assign display_clk = ~(| cnt);
+assign enpos = (4'b1 << i);
 
 always @(posedge clk) begin
-	if(cnt == 5000)
+	if(cnt[11] == 1)
 		cnt <= 0;
 	else
 		cnt <= cnt + 1;
 end
 
-assign divided_clk = (cnt == 0);
-
-reg [1:0] i = 2'h0;
-wire [3:0] curData = data[i * 4 +: 4];
-
-assign enpos = (4'b1 << i);
 
 hex_to_seg hex_to_seg(.data(curData), .seg(seg));
 
-always @(posedge divided_clk) begin
+always @(posedge display_clk) begin
 	i <= i + 1'h1;
 end
 

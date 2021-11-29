@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lesson_3f_0
-Fri Nov 26 16:03:04 2021
+Mon Nov 29 19:49:07 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -42,15 +42,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 26 16:03:04 2021       ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 29 19:49:07 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; lesson_3f_0                                 ;
 ; Top-level Entity Name              ; lesson_3f_0                                 ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 26                                          ;
+; Total logic elements               ; 30                                          ;
 ;     Total combinational functions  ; 26                                          ;
-;     Dedicated logic registers      ; 24                                          ;
-; Total registers                    ; 24                                          ;
+;     Dedicated logic registers      ; 28                                          ;
+; Total registers                    ; 28                                          ;
 ; Total pins                         ; 5                                           ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -177,7 +177,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 26        ;
+; Estimated Total logic elements              ; 30        ;
 ;                                             ;           ;
 ; Total combinational functions               ; 26        ;
 ; Logic element usage by number of LUT inputs ;           ;
@@ -189,8 +189,8 @@ refer to the applicable agreement for further details.
 ;     -- normal mode                          ; 4         ;
 ;     -- arithmetic mode                      ; 22        ;
 ;                                             ;           ;
-; Total registers                             ; 24        ;
-;     -- Dedicated logic registers            ; 24        ;
+; Total registers                             ; 28        ;
+;     -- Dedicated logic registers            ; 28        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
 ; I/O pins                                    ; 5         ;
@@ -198,9 +198,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 24        ;
-; Total fan-out                               ; 106       ;
-; Average fan-out                             ; 1.77      ;
+; Maximum fan-out                             ; 28        ;
+; Total fan-out                               ; 114       ;
+; Average fan-out                             ; 1.78      ;
 +---------------------------------------------+-----------+
 
 
@@ -209,7 +209,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |lesson_3f_0               ; 26 (26)             ; 24 (24)                   ; 0           ; 0            ; 0       ; 0         ; 5    ; 0            ; |lesson_3f_0        ; lesson_3f_0 ; work         ;
+; |lesson_3f_0               ; 26 (26)             ; 28 (28)                   ; 0           ; 0            ; 0       ; 0         ; 5    ; 0            ; |lesson_3f_0        ; lesson_3f_0 ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -219,7 +219,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 24    ;
+; Total registers                              ; 28    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -235,8 +235,8 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 5                           ;
-; cycloneiii_ff         ; 24                          ;
-;     plain             ; 24                          ;
+; cycloneiii_ff         ; 28                          ;
+;     plain             ; 28                          ;
 ; cycloneiii_lcell_comb ; 26                          ;
 ;     arith             ; 22                          ;
 ;         2 data inputs ; 21                          ;
@@ -246,7 +246,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;         2 data inputs ; 2                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 3.20                        ;
-; Average LUT depth     ; 2.34                        ;
+; Average LUT depth     ; 2.22                        ;
 +-----------------------+-----------------------------+
 
 
@@ -265,7 +265,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Nov 26 16:02:34 2021
+    Info: Processing started: Mon Nov 29 19:48:44 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lesson_3f_0 -c lesson_3f_0
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -275,14 +275,14 @@ Info (12127): Elaborating entity "lesson_3f_0" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 31 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 35 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 26 logic cells
+    Info (21061): Implemented 30 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 981 megabytes
-    Info: Processing ended: Fri Nov 26 16:03:04 2021
-    Info: Elapsed time: 00:00:30
-    Info: Total CPU time (on all processors): 00:00:47
+    Info: Processing ended: Mon Nov 29 19:49:07 2021
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:40
 
 

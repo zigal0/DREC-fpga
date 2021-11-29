@@ -1,5 +1,5 @@
 Analysis & Synthesis report for lesson_4f
-Tue Sep 28 21:34:56 2021
+Mon Nov 29 18:34:49 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -42,7 +42,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Sep 28 21:34:56 2021       ;
+; Analysis & Synthesis Status        ; Successful - Mon Nov 29 18:34:49 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; lesson_4f                                   ;
 ; Top-level Entity Name              ; lesson_4f                                   ;
@@ -150,7 +150,7 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
+; Number detected on machine ; 4           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
@@ -158,8 +158,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
-;     Processors 3-4         ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -168,7 +167,7 @@ refer to the applicable agreement for further details.
 +----------------------------------+-----------------+------------------------+---------------------------------------------------------+---------+
 ; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                            ; Library ;
 +----------------------------------+-----------------+------------------------+---------------------------------------------------------+---------+
-; lesson_4f.v                      ; yes             ; User Verilog HDL File  ; /home/yauheni/intelFPGA_lite/18.1/lesson_4f/lesson_4f.v ;         ;
+; lesson_4f.v                      ; yes             ; User Verilog HDL File  ; /home/zigal0/FPGA/DREC-fpga/lecture code/04/lesson_4f.v ;         ;
 +----------------------------------+-----------------+------------------------+---------------------------------------------------------+---------+
 
 
@@ -265,12 +264,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Sep 28 21:34:46 2021
+    Info: Processing started: Mon Nov 29 18:34:26 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off lesson_4f -c lesson_4f
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file lesson_4f.v
-    Info (12023): Found entity 1: lesson_4f File: /home/yauheni/intelFPGA_lite/18.1/lesson_4f/lesson_4f.v Line: 1
+    Info (12023): Found entity 1: lesson_4f File: /home/zigal0/FPGA/DREC-fpga/lecture code/04/lesson_4f.v Line: 1
 Info (12127): Elaborating entity "lesson_4f" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -280,9 +279,9 @@ Info (21057): Implemented 35 device resources after synthesis - the final resour
     Info (21059): Implemented 2 output pins
     Info (21061): Implemented 30 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 997 megabytes
-    Info: Processing ended: Tue Sep 28 21:34:56 2021
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:24
+    Info: Peak virtual memory: 981 megabytes
+    Info: Processing ended: Mon Nov 29 18:34:49 2021
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:39
 
 

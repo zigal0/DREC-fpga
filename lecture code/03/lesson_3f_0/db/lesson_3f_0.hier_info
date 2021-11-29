@@ -1,4 +1,8 @@
 |lesson_3f_0
+clk => btn2_sync[0].CLK
+clk => btn2_sync[1].CLK
+clk => btn1_sync[0].CLK
+clk => btn1_sync[1].CLK
 clk => cnt[0].CLK
 clk => cnt[1].CLK
 clk => cnt[2].CLK
@@ -23,9 +27,9 @@ clk => cnt[20].CLK
 clk => cnt[21].CLK
 clk => cnt[22].CLK
 clk => cnt[23].CLK
-led1 << led1.DB_MAX_OUTPUT_PORT_TYPE
-led2 << led2.DB_MAX_OUTPUT_PORT_TYPE
-btn1 => led1.OUTPUTSELECT
-btn2 => led2.OUTPUTSELECT
+led1 <= led1.DB_MAX_OUTPUT_PORT_TYPE
+led2 <= led2.DB_MAX_OUTPUT_PORT_TYPE
+btn1 => btn1_sync[0].DATAIN
+btn2 => btn2_sync[0].DATAIN
 
 

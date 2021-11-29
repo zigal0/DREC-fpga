@@ -3,27 +3,27 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'CLK'
-Slack : -4.085
-TNS   : -99.187
+Slack : -3.505
+TNS   : -80.912
 
 Type  : Slow 1200mV 85C Model Setup 'cnt[0]'
-Slack : -1.369
-TNS   : -8.559
+Slack : -1.370
+TNS   : -8.567
 
 Type  : Slow 1200mV 85C Model Setup 'hex_display:hex_display|cnt[0]'
-Slack : -0.003
-TNS   : -0.003
+Slack : -0.004
+TNS   : -0.004
 
 Type  : Slow 1200mV 85C Model Hold 'hex_display:hex_display|cnt[0]'
-Slack : 0.453
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'cnt[0]'
-Slack : 0.711
+Slack : 0.452
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'CLK'
-Slack : 0.762
+Slack : 0.658
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'cnt[0]'
+Slack : 0.744
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK'
@@ -39,27 +39,27 @@ Slack : -1.487
 TNS   : -2.974
 
 Type  : Slow 1200mV 0C Model Setup 'CLK'
-Slack : -3.816
-TNS   : -88.089
+Slack : -3.279
+TNS   : -69.849
 
 Type  : Slow 1200mV 0C Model Setup 'cnt[0]'
 Slack : -1.136
 TNS   : -6.934
 
 Type  : Slow 1200mV 0C Model Setup 'hex_display:hex_display|cnt[0]'
-Slack : 0.090
+Slack : 0.089
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'hex_display:hex_display|cnt[0]'
-Slack : 0.401
+Slack : 0.400
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'CLK'
-Slack : 0.624
+Slack : 0.511
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'cnt[0]'
-Slack : 0.635
+Slack : 0.692
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK'
@@ -68,15 +68,15 @@ TNS   : -60.993
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'cnt[0]'
 Slack : -1.487
-TNS   : -12.432
+TNS   : -11.896
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'hex_display:hex_display|cnt[0]'
 Slack : -1.487
 TNS   : -2.974
 
 Type  : Fast 1200mV 0C Model Setup 'CLK'
-Slack : -1.330
-TNS   : -32.553
+Slack : -1.073
+TNS   : -27.948
 
 Type  : Fast 1200mV 0C Model Setup 'cnt[0]'
 Slack : -0.026
@@ -90,17 +90,17 @@ Type  : Fast 1200mV 0C Model Hold 'hex_display:hex_display|cnt[0]'
 Slack : 0.186
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'cnt[0]'
-Slack : 0.270
+Type  : Fast 1200mV 0C Model Hold 'CLK'
+Slack : 0.283
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'CLK'
-Slack : 0.275
+Type  : Fast 1200mV 0C Model Hold 'cnt[0]'
+Slack : 0.296
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK'
 Slack : -3.000
-TNS   : -42.946
+TNS   : -43.227
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'cnt[0]'
 Slack : -1.000
